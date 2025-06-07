@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>Image Gallery</h1>
+
+    <input type="file" id="local-images" multiple webkitdirectory directory accept="image/*" style="margin-bottom: 20px;" />
+
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="nature">Nature</button>
+        <button class="filter-btn" data-filter="architecture">Architecture</button>
+        <button class="filter-btn" data-filter="people">People</button>
+    </div>
+
+    <div class="gallery">
+    </div>
+
+    <!-- Lightbox container -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" />
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+    </div>
+
+    <script src="gallery.js"></script>
+</body>
+</html>
